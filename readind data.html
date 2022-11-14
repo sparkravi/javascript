@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function count(){
+			var numberofcharacters=30;
+			var msg=document.getElementById("msg").value
+			console.log(msg.length)
+			document.getElementById("showcount").innerHTML=numberofcharacters-msg.length
+		}
+		
+	</script>
+</head>
+<body>
+	<!-- <input id="user"/>
+	<p id="there"> are you there </p>
+	<p>ya</p>
+	<button onclick="save()">submit</button>
+	<script type="text/javascript">
+		function save(){
+			var there=document.getElementById("there").innerHTML
+		
+			var user=document.getElementById("user").value
+			console.log(there,user)
+		}
+	</script> -->
+	<textarea id="msg" onkeyup="count()"></textarea>
+	<p>number of the characters left:<span id="showcount">30</span></p>
+</body>
+</html>
