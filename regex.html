@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title> 
+	<script type="text/javascript">
+		function validate(){
+			var firstName=document.getElementById("firstName").value
+			var mobile=document.getElementById("mobile").value
+			var firstNameCheck=/^[a-zA-Z ]+$/
+			var mobileCheck=/^[0-9]{10}$/
+			if(firstName==""||firstName.length<3){
+				alert("please check your name")
+				return false
+			}
+			if(!firstName.match(firstNameCheck)){
+				alert("name must carry characters")
+				return false
+			}
+			if(!mobile.match(mobileCheck)){
+				alert("mobile number must carry 10 digits")
+				return false
+			}
+			return true
+		}
+	</script>
+</head>
+<body>
+	 <form onsubmit="return validate()">
+	 	<p><input placeholder="enter your name" id="firstName"/></p>
+	 	<p><input placeholder="enter your mobile number" id="mobile" /></p>
+	 	   <button>submit</button>
+	 </form>
+</body>
+</html>
